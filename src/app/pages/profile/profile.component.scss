@@ -1,0 +1,49 @@
+$primary-dark: #53166d;
+$primary: #7B1FA2;
+$accent: #69F0AE;
+$accent-dark: #4caa7c;
+$gray: #535353;
+
+#main-card{
+    width: 35vw;
+    margin: 20vh auto 0 auto;
+    min-width: 400px;
+    padding: 1vh 1vw;
+}
+
+mat-card:not(#main-card){
+    background-color: $gray;
+    padding: 1vh 1vw;
+}
+
+mat-card:not(:last-child):not(#main-card){
+    margin-bottom: 3vh;
+}
+
+p:nth-of-type(even){
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-indent: 1vw;
+}
+
+p:nth-of-type(odd){
+    font-size: 2rem;
+    line-height: 2rem;
+    color: $accent-dark;
+}
+
+#icon-container{
+    margin-bottom: 3vh;
+}
+
+mat-divider{
+    width: calc(100% + 3.6vw);
+    margin: 2vh -1.8vw;
+
+}
+
+mat-icon{
+    width: 10rem;
+    height: 10rem;
+    font-size: 10rem;
+}

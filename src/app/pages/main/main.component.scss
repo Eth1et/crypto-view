@@ -1,0 +1,51 @@
+mat-card{
+    padding: 3rem;
+    margin: 3vh  2vw;
+}
+mat-card:first-of-type{
+    margin-top: 1rem;
+}
+mat-card-title{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+#logo{
+    width: 32vw;
+}
+
+.text{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+}
+
+.stonks-background1{
+    background-image: url('../../../assets/stonks.webp');
+    background-size: cover;
+}
+.stonks-background3{
+    background-image: url('../../../assets/stonks3.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+.stonks-background2{
+    background-image: url('../../../assets/stonks2.webp');
+    background-blend-mode:multiply;
+    background-size: cover;
+}
+
+*{
+    text-shadow: 4px 4px rgba(0, 0, 0, 1);
+}
+
+.signup-button{
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+a{
+    background-color: transparent;
+}

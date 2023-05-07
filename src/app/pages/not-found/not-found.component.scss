@@ -1,0 +1,29 @@
+mat-card{
+    text-align: center;
+    background-image: url('../../../assets/sphere.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .1;
+    border-radius: 50vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    height: 100%;
+}
+
+mat-card-title{
+    user-select: none;
+    font-size: 5vw;
+    line-height: 5vw;
+}
+
+#outer{
+    width: 46vw;
+    aspect-ratio: 1;
+    background-image: url('../../../assets/not-found.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50vh;
+    margin: 2vh auto 0 auto;
+}

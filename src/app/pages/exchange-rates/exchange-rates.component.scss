@@ -1,0 +1,82 @@
+$primary-dark: #53166d;
+$primary: #7B1FA2;
+$accent: #69F0AE;
+
+mat-card{
+    width: 70vw;
+    min-width: 400px;
+    margin: 20vh auto 0 auto;
+    padding: 2vh 2vw;
+}
+
+.title-container{
+    width: 100%;
+}
+
+mat-card-header{
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    color: black;
+    padding: 5vh 5vw;
+    margin: -2vh -2vw 0 -2vw;
+}
+
+mat-card-title, mat-card-subtitle{
+    font-size: 4vh;
+    line-height: 4vh;
+    display: block;
+}
+mat-card-subtitle{
+    margin-top: 1vh;
+}
+
+.selected-name{
+    color: $accent;
+}
+
+.search-form-field{
+    width: 60%;
+    min-width: 300px;
+}
+
+mat-divider{
+    margin: 0 -2vw;
+}
+
+th,td{
+    width: 10%;
+    font-size: 1rem;
+}
+th:last-of-type, td:last-of-type{
+    text-align: right;
+}
+
+tr{
+    margin: 2vh 0;
+}
+
+table{
+    width: 45%;
+}
+
+mat-card-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.abbrev{
+    color: $accent;
+}
+
+.half-table{
+    width: 45%;
+}
+.table-group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

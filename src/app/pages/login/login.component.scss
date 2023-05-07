@@ -1,0 +1,30 @@
+#container{
+    height: 90vh;
+}
+
+mat-card{
+    width: 40vw;
+    min-width: 400px;
+    height: 50vh;
+}
+
+mat-form-field{
+    width: 90%;
+}
+
+mat-card-content{
+    flex-wrap: wrap;
+}
+
+button{
+    width: 35%;
+    height: 50%;
+    font-size: 1.5rem;
+}
+
+mat-card-title{
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #69F0AE;
+    margin-top: 4vh;
+}

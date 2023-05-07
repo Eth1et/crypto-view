@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "crypto-view-108b4": {
+      "hosting": {
+        "crypto-view": [
+          "cryptoview"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "crypto-view-108b4"
+  }
+}

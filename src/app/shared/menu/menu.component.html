@@ -1,1 +1,55 @@
-<p>menu works!</p>
+<mat-nav-list class="no-select">
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLink="/main" (click)="close()">
+        <div class="nav-item">
+            <mat-icon>home</mat-icon>
+            <span>Main</span>
+        </div>
+    </a>
+    <mat-divider></mat-divider>
+    <span *ngIf="loggedInUser">
+        <a mat-list-item routerLink="/exchange-rates" (click)="close()">
+            <div class="nav-item">
+                <mat-icon>query_stats</mat-icon>
+                <span>Exchange Rates</span>
+            </div>
+        </a>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="/forum" (click)="close()">
+            <div class="nav-item">
+                <mat-icon>forum</mat-icon>
+                <span>Forum</span>
+            </div>
+        </a>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="/profile" (click)="close()">
+            <div class="nav-item">
+                <mat-icon>account_circle</mat-icon>
+                <span>Profile</span>
+            </div>
+        </a>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="/login" (click)="close(true)">
+            <div class="nav-item">
+                <mat-icon>logout</mat-icon>
+                <span>Logout</span>
+            </div>
+        </a>
+    </span>
+    <span *ngIf="!(loggedInUser)">
+        <a mat-list-item routerLink="/login" (click)="close()">
+            <div class="nav-item">
+                <mat-icon>login</mat-icon>
+                <span>Login</span>
+            </div>
+        </a>
+        <mat-divider></mat-divider>
+        <a mat-list-item routerLink="/signup" (click)="close()">
+            <div class="nav-item">
+                <mat-icon>app_registration</mat-icon>
+                <span>Signup</span>
+            </div>
+        </a>
+    </span>
+    <mat-divider></mat-divider>
+</mat-nav-list>

@@ -1,1 +1,45 @@
-<p>signup works!</p>
+<span *ngIf="loading" class="loading-indicator-container">
+    <mat-spinner color="primary" class="loading-indicator"></mat-spinner>
+</span>
+
+<div id="container" fxFlex fxFlexAlign="center" fxLayoutAlign="center center">
+    <mat-card class="smooth-shadow-large">
+        <mat-card-header>
+            <mat-card-title>Register an account!</mat-card-title>
+        </mat-card-header>
+        <mat-card-content fxFlex fxLayoutAlign="center center">
+            <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                <mat-form-field color="accent">
+                    <mat-label for="username">Username</mat-label>
+                    <input matInput type="text" formControlName="username" required>
+                </mat-form-field>
+                <div formGroupName="name" fxFlex fxLayoutAlign="center center" fxLayoutGap="5%">
+                    <mat-form-field color="accent" class="half-size">
+                        <mat-label for="firstname">First Name</mat-label>
+                        <input matInput type="text" formControlName="firstname" required>
+                    </mat-form-field>
+                    <mat-form-field color="accent" class="half-size"> 
+                        <mat-label for="lastname">Last Name</mat-label>
+                        <input matInput type="text" formControlName="lastname" required>
+                    </mat-form-field>
+                </div>
+                <mat-form-field color="accent">
+                    <mat-label for="email">Email</mat-label>
+                    <input matInput type="email" formControlName="email" required>
+                </mat-form-field>
+                <mat-form-field color="accent">
+                    <mat-label for="password">Password</mat-label>
+                    <input matInput type="password" formControlName="password" required>
+                </mat-form-field>
+                <mat-form-field color="accent">
+                    <mat-label for="rePassword">Confirm Password</mat-label>
+                    <input matInput type="password" formControlName="rePassword" required>
+                </mat-form-field>
+                <div fxFlex fxLayoutAlign="center center" fxLayoutGap="8%" class="buttons">
+                    <button color="accent" mat-raised-button type="submit">Register</button>
+                    <button color="primary" mat-raised-button routerLink="/login">Login</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,1 +1,21 @@
-<p>profile works!</p>
+<mat-card id="main-card" class="smooth-shadow-large">
+    <mat-card-header>
+        <div id="icon-container" fxFlex fxLayoutAlign="center center">
+            <mat-icon color="accent">account_circle</mat-icon>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-card>
+            <mat-card-content>
+                <p>Username</p>
+                <p>{{currentUser?.username}}</p>
+                <mat-divider></mat-divider>
+                <p>Name</p>
+                <p>{{currentUser?.name?.firstname + " " + currentUser?.name?.lastname}}</p>
+                <mat-divider></mat-divider>
+                <p>Email</p>
+                <p>{{currentUser?.email}}</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>

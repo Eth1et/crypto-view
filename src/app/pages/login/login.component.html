@@ -1,1 +1,25 @@
-<p>login works!</p>
+<span *ngIf="loading" class="loading-indicator-container">
+    <mat-spinner color="primary" class="loading-indicator"></mat-spinner>
+</span>
+
+<div id="container" fxFlex fxFlexAlign="center" fxLayoutAlign="center center">
+    <mat-card class="smooth-shadow-large stonks-background3">
+        <mat-card-header fxFlex fxFlexAlign="center">
+            <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content fxFlex fxLayoutAlign="center center">
+            <mat-form-field color="accent">
+                <mat-label for="email">Email</mat-label>
+                <input matInput type="email" [formControl]="email" required>
+            </mat-form-field>
+            <mat-form-field color="accent">
+                <mat-label for="password">Password</mat-label>
+                <input matInput type="password" [formControl]="password" required>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-footer fxFlex fxLayoutAlign="center center" fxLayoutGap="8%">
+            <button color="accent" mat-raised-button (click)="login()">Login</button>
+            <button color="primary" mat-raised-button routerLink="/signup">Sign Up</button>
+        </mat-card-footer>
+    </mat-card>
+</div>

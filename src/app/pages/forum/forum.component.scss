@@ -1,0 +1,42 @@
+$primary-dark: #53166d;
+$primary: #7B1FA2;
+$accent: #69F0AE;
+$card-bg: rgb(54, 54, 54);
+
+#main-card{
+    width: 45%;
+    margin: 9vh auto;
+    min-width: 400px;
+}
+
+#title{
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+mat-divider{
+    margin: 2vh 0;
+}
+
+.forum-title{
+    font-size: 1.5rem;
+    color: $accent;
+}
+
+.forum-subtitle{
+    font-size: 1rem;
+    color: white;
+}
+
+.button{
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    background-color: $card-bg;
+    padding: 2vh 2vw 1vh 2vw;
+}
+
+.button-container:not(:last-of-type){
+    margin-bottom: 2vh;
+}

@@ -1,1 +1,28 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-menu (onCloseSidenav)="onClose($event, sidenav)" [loggedInUser]="loggedInUser" (onLogout)="logout($event)"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content> 
+    <mat-toolbar color="primary" class="no-select smooth-shadow-small" id="toolbar">
+      <button mat-icon-button fxHide.gt-md (click)="onToggleSidenav(sidenav)">
+        <mat-icon>menu</mat-icon>
+      </button>
+    
+      <a routerLink="/main" class="main-anchor" mat-flat-button color="primary">
+        <img alt="logo" id="logo" src="assets/AppLogoOnly.png">
+        <h1 id="app-name">CryptoView</h1>
+      </a>
+      <div fxFlex fxLayout fxFlexAlign="center" fxLayoutAlign="flex-end" fxHide.lt-lg class="nav-div">
+        <ul fxLayout fxLayoutGap="1.6vw" id="navigation-list">
+          <li *ngIf="loggedInUser"><a mat-button routerLink="/exchange-rates">Exchange Rates</a></li>
+          <li *ngIf="loggedInUser"><a mat-button routerLink="/forum">Forum</a></li>
+          <li *ngIf="loggedInUser"><a mat-button routerLink="/profile">Profile</a></li>
+          <li *ngIf="!(loggedInUser)"><a mat-button routerLink="/login">Login</a></li>
+          <li *ngIf="!(loggedInUser)"><a mat-button routerLink="/signup">Signup</a></li>
+          <li *ngIf="loggedInUser"><a mat-button routerLink="/login" (click)="logout()">Logout</a></li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

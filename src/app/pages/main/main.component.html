@@ -1,1 +1,40 @@
-<p>main works!</p>
+<div id="container">
+</div>
+<mat-card id="welcome-card" class="smooth-shadow-large stonks-background3">
+    <mat-card-header fxFlex fxFlexAlign="center">
+        <mat-card-title>Introducing Crypto View, your go-to website for real-time cryptocurrency exchange rates</mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxFlex fxFlexAlign="center" fxLayoutAlign="center">
+        <img alt="logo" id="logo" src="assets/AppLogo.png">
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="smooth-shadow-large stonks-background1">
+    <mat-card-header>
+        <mat-card-title>Start tracking your favorite coins today</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <img >
+        <p class="text">
+            Our website is designed to be easy to use, so you can check rates on the go from any device.<br><br>
+            Stay up to date with the latest market trends and make informed trading decisions.<br><br>
+            Our exchange rates are updated real-time, so that you do not miss any opportunities
+        </p>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="smooth-shadow-large stonks-background2" *ngIf="!(currentUser)">
+    <mat-card-header>
+        <mat-card-title>Join the thousands of users who trust Crypto View</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <img >
+        <p class="text">
+            Be a part of our community, and talk about anything crypto related on our forum<br><br>
+            Have a chat with the greatest experts in crypto trading anytime you want<br><br>
+            <button mat-button routerLink="/signup" color="accent" class="signup-button">
+                <b>SIGN UP NOW</b>
+            </button>
+        </p>
+    </mat-card-content>
+</mat-card>

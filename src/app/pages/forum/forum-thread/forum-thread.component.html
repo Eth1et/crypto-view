@@ -1,0 +1,52 @@
+<button color="accent" id="back-button" matPrefix mat-icon-button (click)="backToForums()">
+    <mat-icon class="nav-icon" color="accent">arrow_back</mat-icon>
+</button>
+<button color="primary" id="down-button" matPrefix mat-icon-button (click)="goToBottom()">
+    <mat-icon class="nav-icon" color="primary">keyboard_double_arrow_down</mat-icon>
+</button>
+
+<mat-card id="main-card" class="smooth-shadow-large">
+    <mat-card-header fxFlex fxLayoutAlign="center center" fxLayoutGap="1vh">
+        <mat-card-title class="title">{{forum?.title}}</mat-card-title>
+        <mat-card-subtitle class="subtitle">{{forum?.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <div *ngFor="let comment of comments" class="comments-container">
+            <mat-card *ngIf="comment.sender.username !== currentUser?.username" class="smooth-shadow-small comment">
+                <mat-card-header class="comment-info">
+                    <mat-card-title>{{comment.sender.username}}</mat-card-title>
+                    <mat-card-subtitle>{{comment.sender.name.firstname +" "+ comment.sender.name.lastname}}</mat-card-subtitle>
+                    <mat-card-subtitle class="time">{{comment.date.seconds | dateFormat}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="limit-message">
+                        <p class="comment-message">{{comment.message}}</p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+
+            <mat-card *ngIf="comment.sender.username === currentUser?.username" class="smooth-shadow-small userComment">
+                <mat-card-header class="comment-info">
+                    <mat-card-title>{{comment.sender.username}}</mat-card-title>
+                    <mat-card-subtitle>{{comment.sender.name.firstname +" "+ comment.sender.name.lastname}}</mat-card-subtitle>
+                    <mat-card-subtitle class="time">{{comment.date.seconds | dateFormat}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="limit-message">
+                        <p class="comment-message">{{comment.message}}</p>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-footer class="commnet-form-container">
+            <mat-form-field id="comment-field" color="accent">
+                <mat-label for="message">Message</mat-label>
+                <textarea #messageInput matInput [formControl]="comment" type="text" placeholder="Type something here..." value=""></textarea>
+            </mat-form-field>
+            <button mat-icon-button id="send-button" (click)="addComment(messageInput)"><mat-icon color="accent">send</mat-icon></button>
+    </mat-card-footer>
+</mat-card>
+<span id="bottom"></span>
